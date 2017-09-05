@@ -8,4 +8,6 @@ RUN apt-get update && \
         install python-simplejson lava-tool && \
     rm -rf /var/lib/apt/lists/*
 
+WORKDIR /work
+
 ENTRYPOINT ["lava-tool"]
