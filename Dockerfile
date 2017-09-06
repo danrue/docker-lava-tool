@@ -5,7 +5,9 @@ RUN echo 'deb http://ftp.debian.org/debian stretch-backports main' > \
 
 RUN apt-get update && \
     apt-get --no-install-recommends -y -t stretch-backports \
-        install python-simplejson lava-tool && \
+        install python-simplejson \
+                lava-tool \
+                git && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /work
